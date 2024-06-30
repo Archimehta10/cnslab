@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Diffie-Helman Key Exchange</title>
+</head>
+<body>
+<script>
+    let p = BigInt(prompt("Enter p:"));
+    let g = BigInt(prompt("Enter g:"));
+    let a = BigInt(prompt("Enter a:"));
+    let b = BigInt(prompt("Enter b:"));
+
+    let A = (g**a)%p;
+    let B =(g**b)%p;
+    let s1 =(B**a)%p;
+    let s2 =(A**b)%p;
+
+    document.write("p:"+p+"<br>");
+    document.write("g:"+g+"<br>");
+    document.write("a:"+a+"<br>");
+    document.write("b:"+b+"<br>");
+    document.write("A:"+A+"<br>");
+    document.write("B:"+B+"<br>");
+    document.write("S1:"+s1+"<br>");
+    document.write("S2:"+s2+"<br>");
+
+</script>
+</body>
